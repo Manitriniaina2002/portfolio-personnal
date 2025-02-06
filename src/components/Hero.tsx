@@ -4,26 +4,26 @@ import { GraduationCap, Briefcase } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 bg-black">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-black">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-left"
+          className="text-left order-2 md:order-1"
         >
           <span className="inline-block px-3 py-1 text-sm font-medium bg-green-500/10 text-green-500 rounded-full mb-4">
             M1 Computer Science Student
           </span>
-          <h3 className="text-4xl md:text-xl font-bold text-white mb-6">
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 md:mb-6">
             RANDRIAMBOLOLONA Manitriniaina Louis Josilde
           </h3>
-          <p className="text-lg text-gray-400 mb-8 max-w-2xl">
+          <p className="text-base sm:text-lg text-gray-400 mb-6 md:mb-8">
             Born on December 29, 2002. Professional license in general computer science 
             at ENI (2024). Specializing in Artificial Intelligence, Connected Objects, 
             and Cybersecurity. Experienced in full-stack development with international exposure.
           </p>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-gray-400">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 text-gray-400">
             <div className="flex items-center gap-2">
               <GraduationCap className="w-5 h-5 text-green-500" />
               <span>ENI University</span>
@@ -38,13 +38,13 @@ export const Hero = () => {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="relative"
+          className="relative order-1 md:order-2"
         >
-          <div className="w-full aspect-square rounded-2xl overflow-hidden border-2 border-green-500/20">
+          <div className="w-full max-w-md mx-auto aspect-square rounded-2xl overflow-hidden border-2 border-green-500/20">
             <img
               src="/placeholder.svg"
               alt="Profile of RANDRIAMBOLOLONA Manitriniaina Louis Josilde"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
