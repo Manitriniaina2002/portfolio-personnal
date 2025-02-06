@@ -13,7 +13,7 @@ export const Education = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-green-500/10 text-green-500 rounded-full mb-4">
+          <span className="inline-block px-3 py-1 text-4xl font-medium bg-green-500/10 text-green-500 rounded-full mb-4">
             Education
           </span>
           <h2 className="text-3xl font-bold text-white">Academic Journey</h2>
