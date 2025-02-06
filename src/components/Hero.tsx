@@ -16,14 +16,14 @@ export const Hero = () => {
             M1 Computer Science Student
           </span>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Aspiring AI Engineer & Full-Stack Developer
+            RANDRIAMBOLOLONA Manitriniaina Louis Josilde
           </h1>
           <p className="text-lg text-gray-400 mb-8 max-w-2xl">
-            Specializing in Artificial Intelligence, Connected Objects, and
-            Cybersecurity. Experienced in full-stack development with international
-            exposure.
+            Born on December 29, 2002. Professional license in general computer science 
+            at ENI (2024). Specializing in Artificial Intelligence, Connected Objects, 
+            and Cybersecurity. Experienced in full-stack development with international exposure.
           </p>
-          <div className="flex items-center gap-6 text-gray-400">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 text-gray-400">
             <div className="flex items-center gap-2">
               <GraduationCap className="w-5 h-5 text-green-500" />
               <span>ENI University</span>
@@ -43,7 +43,7 @@ export const Hero = () => {
           <div className="w-full aspect-square rounded-2xl overflow-hidden border-2 border-green-500/20">
             <img
               src="/placeholder.svg"
-              alt="Profile"
+              alt="Profile of RANDRIAMBOLOLONA Manitriniaina Louis Josilde"
               className="w-full h-full object-cover"
             />
           </div>
