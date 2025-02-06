@@ -15,7 +15,7 @@ export const Hero = () => {
           <span className="inline-block px-3 py-1 text-sm font-medium bg-green-500/10 text-green-500 rounded-full mb-4">
             M1 Computer Science Student
           </span>
-          <h3 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h3 className="text-4xl md:text-xl font-bold text-white mb-6">
             RANDRIAMBOLOLONA Manitriniaina Louis Josilde
           </h3>
           <p className="text-lg text-gray-400 mb-8 max-w-2xl">
