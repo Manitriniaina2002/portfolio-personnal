@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 
 const experiences = [
@@ -19,7 +20,7 @@ const experiences = [
 
 export const Experience = () => {
   return (
-    <section className="py-20 px-4" id="experience">
+    <section className="py-20 px-4 bg-black" id="experience">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0 }}
@@ -27,10 +28,10 @@ export const Experience = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <span className="inline-block px-3 py-1 text-sm font-medium bg-slate-100 text-slate-800 rounded-full mb-4">
+          <span className="inline-block px-3 py-1 text-sm font-medium bg-green-500/10 text-green-500 rounded-full mb-4">
             Experience
           </span>
-          <h2 className="text-3xl font-bold text-slate-800 mb-12">
+          <h2 className="text-3xl font-bold text-white mb-12">
             Professional Journey
           </h2>
         </motion.div>
@@ -43,14 +44,14 @@ export const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="backdrop-blur-sm bg-white/30 border border-slate-200 rounded-xl p-6 hover:shadow-lg transition-all"
+              className="backdrop-blur-sm bg-white/5 border border-green-500/10 rounded-xl p-6 hover:border-green-500/30 transition-all"
             >
-              <h3 className="text-xl font-semibold text-slate-800 mb-2">
+              <h3 className="text-xl font-semibold text-white mb-2">
                 {exp.title}
               </h3>
-              <p className="text-slate-600 mb-2">{exp.company}</p>
-              <p className="text-sm text-slate-500 mb-4">{exp.duration}</p>
-              <p className="text-slate-600">{exp.description}</p>
+              <p className="text-gray-400 mb-2">{exp.company}</p>
+              <p className="text-sm text-gray-500 mb-4">{exp.duration}</p>
+              <p className="text-gray-400">{exp.description}</p>
             </motion.div>
           ))}
         </div>
