@@ -35,7 +35,7 @@ export const Education = () => {
                 <h3 className="text-xl font-semibold text-white">
                   Master's in Computer Science (Current)
                 </h3>
-                <p className="text-gray-400">ENI University - M1</p>
+                <p className="text-gray-400">ENI Fianarantsoa - M1</p>
               </div>
             </div>
 
@@ -72,7 +72,7 @@ export const Education = () => {
                 <h3 className="text-xl font-semibold text-white">
                   Professional License in General Computer Science
                 </h3>
-                <p className="text-gray-400">ENI University (2024)</p>
+                <p className="text-gray-400">ENI Fianarantsoa (2024)</p>
               </div>
             </div>
           </motion.div>
@@ -90,9 +90,9 @@ export const Education = () => {
               </div>
               <div>
                 <h3 className="text-xl font-semibold text-white">
-                  Baccalaureate Series C
+                  Baccalaureate Series C 
                 </h3>
-                <p className="text-gray-400">2020</p>
+                <p className="text-gray-400">LRR Fianarantsoa (2020)</p>
               </div>
             </div>
           </motion.div>

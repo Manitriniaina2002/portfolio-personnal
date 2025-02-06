@@ -15,9 +15,9 @@ export const Hero = () => {
           <span className="inline-block px-3 py-1 text-sm font-medium bg-green-500/10 text-green-500 rounded-full mb-4">
             M1 Computer Science Student
           </span>
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h3 className="text-4xl md:text-6xl font-bold text-white mb-6">
             RANDRIAMBOLOLONA Manitriniaina Louis Josilde
-          </h1>
+          </h3>
           <p className="text-lg text-gray-400 mb-8 max-w-2xl">
             Born on December 29, 2002. Professional license in general computer science 
             at ENI (2024). Specializing in Artificial Intelligence, Connected Objects, 
