@@ -128,7 +128,7 @@ export const Hero = () => {
                   initial={{ scale: 0.8 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  src="/Photo.jpg"
+                  src="/Me.jpeg"
                   alt="Profile of RANDRIAMBOLOLONA Manitriniaina Louis Josilde"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
