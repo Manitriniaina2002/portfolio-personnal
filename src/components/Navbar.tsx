@@ -127,17 +127,20 @@ const Navbar = () => {
               </select>
 
               {/* CTA Button */}
-              <motion.button
+              <motion.a
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 whileHover={{ scale: 1.05, y: -1 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                href="/randriambololona.pdf"
+                download
+                aria-label={t('downloadResume')}
               >
                 <Download className="w-4 h-4" />
-                <span>{t("resume")}</span>
-              </motion.button>
+                <span>{t("downloadResume")}</span>
+              </motion.a>
             </div>
 
             {/* Mobile Menu Button */}
@@ -215,15 +218,18 @@ const Navbar = () => {
                 </select>
 
                 {/* Mobile CTA */}
-                <motion.button
+                <motion.a
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.3, delay: navItems.length * 0.1 }}
                   className="flex items-center justify-center gap-2 w-full mt-4 px-5 py-3 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl shadow-lg"
+                  href="/randriambololona.pdf"
+                  download
+                  aria-label={t('downloadResume')}
                 >
                   <Download className="w-4 h-4" />
                   <span>{t("downloadResume")}</span>
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           )}
