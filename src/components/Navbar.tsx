@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Code2, User, GraduationCap, Briefcase, Mail, Download } from "lucide-react";
+import { Menu, X, User, GraduationCap, Briefcase, Mail, Download } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -69,8 +69,8 @@ const Navbar = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center gap-3"
             >
-              <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-xl shadow-lg">
-                <Code2 className="w-5 h-5 text-white" />
+              <div className="w-12 h-12 bg-white/80 p-1 rounded-lg shadow-md flex items-center justify-center">
+                <img src="/devops-logo.png" alt="DevOps logo" className="w-10 h-10 object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="text-lg font-bold bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
