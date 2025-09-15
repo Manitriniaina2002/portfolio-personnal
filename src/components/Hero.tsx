@@ -1,137 +1,211 @@
-
 import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Mail, Phone, Linkedin } from "lucide-react";
+import { GraduationCap, Briefcase, Mail, Phone, Linkedin, Github, MapPin, Calendar } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 export const Hero = () => {
+  const { t } = useTranslation();
   return (
-    <section className="min-h-screen relative overflow-hidden bg-gradient-to-r from-gray-900 via-black to-gray-900">
-      {/* Background decoration */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-green-500 rounded-full filter blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-green-500 rounded-full filter blur-3xl" />
+    <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-emerald-400/10 to-blue-400/10 rounded-full filter blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-r from-purple-400/5 to-pink-400/5 rounded-full filter blur-2xl animate-pulse delay-2000" />
       </div>
 
-      <div className="relative flex items-center justify-center px-4 sm:px-6 lg:px-8 min-h-screen py-12">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="relative flex items-center justify-center px-6 sm:px-8 lg:px-12 min-h-screen py-16">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          
           {/* Content Section */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-left order-2 lg:order-1 space-y-6"
+            transition={{ duration: 0.8 }}
+            className="text-left order-2 lg:order-1 space-y-8"
           >
-            {/* Title and Role */}
-            <div className="space-y-4">
-              <motion.span
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="inline-block px-4 py-2 text-lg font-medium bg-green-500/10 text-green-400 rounded-full"
+            {/* Badge and Title */}
+            <div className="space-y-6">
+              <motion.div
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="flex items-center gap-3"
               >
-                DevOps Specialist
-              </motion.span>
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                <span className="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-emerald-500/10 to-blue-500/10 text-emerald-700 rounded-full border border-emerald-200">
+                  {t("hero.role")}
+                </span>
+              </motion.div>
+              
               <motion.h1
-                initial={{ x: -50 }}
-                animate={{ x: 0 }}
-                transition={{ duration: 0.5 }}
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight"
+                initial={{ x: -30, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 tracking-tight leading-tight"
               >
-                RANDRIAMBOLOLONA
+                <span className="bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
+                  {t("hero.lastname")}
+                </span>
                 <br />
-                Manitriniaina Louis Josilde
+                <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">
+                  {t("hero.firstname")}
+                </span>
               </motion.h1>
             </div>
 
             {/* Bio */}
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-lg text-gray-300 leading-relaxed max-w-2xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg text-slate-600 leading-relaxed max-w-2xl"
             >
-              Born on December 29, 2002, I've spent my time exploring the fascinating worlds of Artificial Intelligence,
-              Connected Objects, and Cybersecurity, all while honing my full-stack development skills,
-              gaining experience, and constantly challenging myself to push boundaries in the tech world.
+              {t("hero.bio")}
             </motion.p>
 
-            {/* Info Grid */}
-            <div className="grid sm:grid-cols-2 gap-4 text-gray-300">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.3 }}
-                className="flex items-center gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors"
-              >
-                <GraduationCap className="w-5 h-5 text-green-400" />
-                <span>ENI University</span>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="flex items-center gap-3 bg-white/5 rounded-lg p-3 hover:bg-white/10 transition-colors"
-              >
-                <Briefcase className="w-5 h-5 text-green-400" />
-                <span>2 Internships</span>
-              </motion.div>
-            </div>
+            {/* Quick Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="grid sm:grid-cols-3 gap-4"
+            >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-slate-200 hover:border-emerald-300 transition-all duration-300 hover:shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-emerald-100 rounded-lg">
+                    <GraduationCap className="w-5 h-5 text-emerald-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500">{t("hero.stats.education")}</p>
+                    <p className="text-sm font-semibold text-slate-900">{t("hero.stats.educationDetail")}</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-slate-200 hover:border-blue-300 transition-all duration-300 hover:shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-blue-100 rounded-lg">
+                    <Briefcase className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500">{t("hero.stats.experience")}</p>
+                    <p className="text-sm font-semibold text-slate-900">{t("hero.stats.experienceDetail")}</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border border-slate-200 hover:border-purple-300 transition-all duration-300 hover:shadow-lg">
+                <div className="flex items-center gap-3">
+                  <div className="p-2 bg-purple-100 rounded-lg">
+                    <MapPin className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-slate-500">{t("hero.stats.location")}</p>
+                    <p className="text-sm font-semibold text-slate-900">{t("hero.stats.locationDetail")}</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
 
             {/* Contact Info */}
-            <div className="space-y-3">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors"
-              >
-                <Mail className="w-5 h-5" />
-                <a href="mailto:manitriniaina2002@gmail.com" className="hover:underline">
-                  manitriniaina2002@gmail.com
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="space-y-4"
+            >
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="mailto:manitriniaina2002@gmail.com"
+                  className="flex items-center gap-3 px-4 py-3 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-200 hover:border-emerald-300 text-slate-700 hover:text-emerald-700 transition-all duration-300 hover:shadow-md"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span className="text-sm font-medium">{t("hero.contact.email")}</span>
                 </a>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 }}
-                className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors"
-              >
-                <Phone className="w-5 h-5" />
-                <a href="tel:+261347297148" className="hover:underline">
-                  +261 34 72 971 48
+                
+                <a
+                  href="tel:+261347297148"
+                  className="flex items-center gap-3 px-4 py-3 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-200 hover:border-blue-300 text-slate-700 hover:text-blue-700 transition-all duration-300 hover:shadow-md"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span className="text-sm font-medium">{t("hero.contact.phone")}</span>
                 </a>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: 0.7 }}
-                className="flex items-center gap-3 text-gray-300 hover:text-green-400 transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-                <a href="https://linkedin.com/in/manitriniaina" target="_blank" rel="noopener noreferrer" className="hover:underline">
-                  linkedin.com/in/manitriniaina
+                
+                <a
+                  href="https://linkedin.com/in/manitriniaina"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-200 hover:border-blue-300 text-slate-700 hover:text-blue-700 transition-all duration-300 hover:shadow-md"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  <span className="text-sm font-medium">{t("hero.contact.linkedin")}</span>
                 </a>
-              </motion.div>
-            </div>
+                
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 px-4 py-3 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-200 hover:border-slate-400 text-slate-700 hover:text-slate-900 transition-all duration-300 hover:shadow-md"
+                >
+                  <Github className="w-4 h-4" />
+                  <span className="text-sm font-medium">{t("hero.contact.github")}</span>
+                </a>
+              </div>
+              
+              <div className="flex items-center gap-2 text-sm text-slate-500">
+                <Calendar className="w-4 h-4" />
+                <span>{t("hero.birthday")}</span>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Image Section */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
             className="relative order-1 lg:order-2"
           >
-            <div className="relative w-full max-w-md mx-auto aspect-square">
-              <div className="absolute inset-0 bg-green-500/20 rounded-full blur-3xl transform -rotate-6" />
-              <div className="relative rounded-full overflow-hidden border-4 border-green-500/20 shadow-xl">
-                <motion.img
-                  initial={{ scale: 0.8 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                  src="/Me.jpeg"
-                  alt="Profile of RANDRIAMBOLOLONA Manitriniaina Louis Josilde"
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-                />
+            <div className="relative w-full max-w-lg mx-auto">
+              {/* Background decoration */}
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-blue-400/20 rounded-3xl blur-3xl transform rotate-6 scale-105" />
+              <div className="absolute inset-0 bg-gradient-to-l from-purple-400/20 to-pink-400/20 rounded-3xl blur-2xl transform -rotate-3 scale-110" />
+              
+              {/* Main image container */}
+              <div className="relative">
+                <div className="aspect-square rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-br from-slate-100 to-white">
+                  <motion.img
+                    initial={{ scale: 1.1 }}
+                    animate={{ scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    src="/Me.jpg"
+                    alt="RANDRIAMBOLOLONA Manitriniaina - DevOps Engineer"
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+                
+                {/* Floating elements */}
+                <motion.div
+                  animate={{ y: [-10, 10, -10] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                  className="absolute -top-4 -right-4 bg-white rounded-2xl p-4 shadow-xl border border-slate-200"
+                >
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-semibold text-slate-700">Available</span>
+                  </div>
+                </motion.div>
+                
+                <motion.div
+                  animate={{ y: [10, -10, 10] }}
+                  transition={{ duration: 4, repeat: Infinity, delay: 2 }}
+                  className="absolute -bottom-4 -left-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-2xl p-4 shadow-xl"
+                >
+                  <div className="flex items-center gap-2">
+                    <Briefcase className="w-4 h-4" />
+                    <span className="text-sm font-semibold">DevOps</span>
+                  </div>
+                </motion.div>
               </div>
             </div>
           </motion.div>
