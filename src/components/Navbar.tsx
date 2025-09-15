@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, User, GraduationCap, Briefcase, Mail, Download } from "lucide-react";
+import { Menu, X, User, GraduationCap, Briefcase, Mail, Download, Code2 } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,11 +24,12 @@ const Navbar = () => {
   ];
 
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState(i18n.language || "en");
+  const [language, setLanguage] = useState(() => (typeof window !== 'undefined' ? (localStorage.getItem('selectedLng') || i18n.language || 'en') : (i18n.language || 'en')));
 
   const navItems = [
     { href: "#hero", label: t("home"), icon: User },
     { href: "#experience", label: t("experience"), icon: Briefcase },
+    { href: "#projects", label: t("projects"), icon: Code2 },
     { href: "#education", label: t("education"), icon: GraduationCap },
     { href: "#contact", label: t("contact"), icon: Mail }
   ];
@@ -45,6 +46,11 @@ const Navbar = () => {
   const handleLanguageChange = (lang: string) => {
     setLanguage(lang);
     i18n.changeLanguage(lang);
+    try {
+      localStorage.setItem('selectedLng', lang);
+    } catch (e) {
+      // ignore localStorage errors (e.g., in SSR or privacy modes)
+    }
   };
 
   return (
@@ -55,8 +61,8 @@ const Navbar = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-white/80 backdrop-blur-lg border-b border-slate-200/50 shadow-lg"
-            : "bg-white/60 backdrop-blur-sm"
+            ? "bg-white/90 backdrop-blur-lg border-b border-slate-200/50 shadow-lg"
+            : "bg-white/70 backdrop-blur-sm"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -69,7 +75,7 @@ const Navbar = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex items-center gap-3"
             >
-              <div className="w-12 h-12 bg-white/80 p-1 rounded-lg shadow-md flex items-center justify-center">
+              <div className="w-12 h-12 bg-white/90 p-1 rounded-lg shadow-md flex items-center justify-center">
                 <img src="/devops-logo.png" alt="DevOps logo" className="w-10 h-10 object-contain" />
               </div>
               <div className="flex flex-col">
@@ -82,7 +88,7 @@ const Navbar = () => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
-              <ul className="flex items-center gap-2">
+              <ul className="flex items-center gap-1">
                 {navItems.map((item, index) => {
                   const IconComponent = item.icon;
                   return (
@@ -96,7 +102,7 @@ const Navbar = () => {
                         onClick={() => handleNavClick(item.href)}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="flex items-center gap-2 px-4 py-2 text-slate-700 hover:text-slate-900 font-medium rounded-xl hover:bg-slate-100/80 transition-all duration-300 group"
+                        className="flex items-center gap-2 px-4 py-2.5 text-slate-700 hover:text-slate-900 font-medium rounded-xl hover:bg-slate-100/80 transition-all duration-300 group"
                       >
                         <IconComponent className="w-4 h-4 text-slate-500 group-hover:text-emerald-600 transition-colors" />
                         <span className="relative">
@@ -113,7 +119,7 @@ const Navbar = () => {
               <select
                 value={language}
                 onChange={e => handleLanguageChange(e.target.value)}
-                className="ml-4 px-3 py-2 rounded-xl border border-slate-300 bg-white text-slate-700 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
+                className="ml-4 px-3 py-2 rounded-xl border border-slate-300 bg-white/90 text-slate-700 font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
               >
                 {languages.map(lang => (
                   <option key={lang.code} value={lang.code}>{lang.label}</option>

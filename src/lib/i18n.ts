@@ -6,7 +6,9 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en",
+    // Try to read saved language from localStorage (key: selectedLng).
+    // Fallback to 'en' if not set.
+    lng: (typeof window !== 'undefined' && localStorage.getItem('selectedLng')) || "en",
     fallbackLng: "en",
     interpolation: {
       escapeValue: false,
