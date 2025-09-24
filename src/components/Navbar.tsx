@@ -79,7 +79,7 @@ const Navbar = () => {
                 <img src="/devops-logo.png" alt="DevOps logo" className="w-10 h-10 object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
+                <span className="text-sm font-bold bg-gradient-to-r from-slate-900 to-slate-600 bg-clip-text text-transparent">
                   {t("name")}
                 </span>
                 <span className="text-xs text-slate-500 font-medium">{t("devopsEngineer")}</span>

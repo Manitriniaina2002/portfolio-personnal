@@ -5,123 +5,63 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "projects.0.title",
-    description: "projects.0.description", 
-    category: "projects.0.category",
+    title: "projects.portfolio.title",
+    description: "projects.portfolio.description",
+    category: "projects.portfolio.category",
     images: [
-      "/placeholder.svg",
-      "/devops-logo.png",
-      "/placeholder.svg"
-    ],
-    technologies: [
-      "projects.0.technologies.0",
-      "projects.0.technologies.1", 
-      "projects.0.technologies.2",
-      "projects.0.technologies.3",
-      "projects.0.technologies.4",
-      "projects.0.technologies.5"
-    ],
-    features: [
-      "projects.0.features.0",
-      "projects.0.features.1",
-      "projects.0.features.2",
-      "projects.0.features.3"
-    ],
-    status: "completed",
-    duration: "projects.0.duration",
-    team: "projects.0.team",
-    github: "https://github.com/Manitriniaina2002",
-    demo: "https://github.com/Manitriniaina2002",
-    icon: Server,
-    color: "emerald"
-  },
-  {
-    title: "projects.1.title",
-    description: "projects.1.description",
-    category: "projects.1.category", 
-    images: [
-      "/placeholder.svg",
-      "/Me.jpg",
-      "/placeholder.svg"
-    ],
-    technologies: [
-      "projects.1.technologies.0",
-      "projects.1.technologies.1",
-      "projects.1.technologies.2", 
-      "projects.1.technologies.3",
-      "projects.1.technologies.4"
-    ],
-    features: [
-      "projects.1.features.0",
-      "projects.1.features.1",
-      "projects.1.features.2",
-      "projects.1.features.3" 
-    ],
-    status: "completed",
-    duration: "projects.1.duration",
-    team: "projects.1.team",
-    github: "https://github.com/Manitriniaina2002",
-    demo: "https://github.com/Manitriniaina2002",
-    icon: Globe,
-    color: "blue"
-  },
-  {
-    title: "projects.2.title", 
-    description: "projects.2.description",
-    category: "projects.2.category",
-    images: [
-      "/placeholder.svg",
-      "/devops-logo.svg", 
-      "/placeholder.svg"
-    ],
-    technologies: [
-      "projects.2.technologies.0",
-      "projects.2.technologies.1",
-      "projects.2.technologies.2",
-      "projects.2.technologies.3",
-      "projects.2.technologies.4"
-    ],
-    features: [
-      "projects.2.features.0",
-      "projects.2.features.1", 
-      "projects.2.features.2",
-      "projects.2.features.3"
-    ],
-    status: "completed",
-    duration: "projects.2.duration",
-    team: "projects.2.team",
-    github: "https://github.com/Manitriniaina2002",
-    demo: "https://github.com/Manitriniaina2002", 
-    icon: Shield,
-    color: "purple"
-  },
-  {
-    title: "projects.3.title",
-    description: "projects.3.description",
-    category: "projects.3.category",
-    images: [
-      "/placeholder.svg",
+      "/Me.jpeg",
       "/og-image.png",
-      "/placeholder.svg"
+      "/Photo.jpg"
     ],
     technologies: [
-      "projects.3.technologies.0",
-      "projects.3.technologies.1",
-      "projects.3.technologies.2", 
-      "projects.3.technologies.3"
+      "projects.portfolio.technologies.0",
+      "projects.portfolio.technologies.1",
+      "projects.portfolio.technologies.2",
+      "projects.portfolio.technologies.3",
+      "projects.portfolio.technologies.4",
+      "projects.portfolio.technologies.5"
     ],
     features: [
-      "projects.3.features.0",
-      "projects.3.features.1",
-      "projects.3.features.2"
+      "projects.portfolio.features.0",
+      "projects.portfolio.features.1",
+      "projects.portfolio.features.2",
+      "projects.portfolio.features.3"
     ],
-    status: "in-progress",
-    duration: "projects.3.duration", 
-    team: "projects.3.team",
-    github: "https://github.com/Manitriniaina2002",
-    demo: "https://github.com/Manitriniaina2002",
-    icon: Zap,
-    color: "orange"
+    status: "completed",
+    duration: "projects.portfolio.duration",
+    team: "projects.portfolio.team",
+    github: "https://github.com/Manitriniaina2002/portfolio-personnal",
+    demo: "https://portfolio-personnal-chi.vercel.app",
+    icon: Code2,
+    color: "indigo"
+  }
+];
+
+// Project Screenshots Gallery
+const projectScreenshots = [
+  {
+    title: "projects.screenshots.devops.title",
+    description: "projects.screenshots.devops.description",
+    image: "/placeholder.svg",
+    category: "DevOps"
+  },
+  {
+    title: "projects.screenshots.web.title", 
+    description: "projects.screenshots.web.description",
+    image: "/placeholder.svg",
+    category: "Web Development"
+  },
+  {
+    title: "projects.screenshots.mobile.title",
+    description: "projects.screenshots.mobile.description", 
+    image: "/placeholder.svg",
+    category: "Mobile App"
+  },
+  {
+    title: "projects.screenshots.dashboard.title",
+    description: "projects.screenshots.dashboard.description",
+    image: "/placeholder.svg", 
+    category: "Analytics"
   }
 ];
 
@@ -238,6 +178,14 @@ export const Projects = () => {
       text: 'text-orange-700',
       accent: 'text-orange-600',
       button: 'hover:bg-orange-50'
+    },
+    indigo: {
+      bg: 'from-indigo-50 to-violet-50',
+      border: 'border-indigo-200', 
+      icon: 'bg-indigo-500',
+      text: 'text-indigo-700',
+      accent: 'text-indigo-600',
+      button: 'hover:bg-indigo-50'
     }
   };
 
@@ -431,13 +379,68 @@ export const Projects = () => {
           })}
         </div>
 
+        {/* Project Screenshots Gallery */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mt-16 sm:mt-20 lg:mt-24"
+        >
+          <div className="text-center mb-8 sm:mb-12">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
+              {t("projects.screenshots.title")}
+            </h3>
+            <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
+              {t("projects.screenshots.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
+            {projectScreenshots.map((screenshot, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -4, scale: 1.02 }}
+                className="group relative"
+              >
+                <div className="relative overflow-hidden rounded-xl sm:rounded-2xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="aspect-[4/3] bg-gradient-to-br from-slate-100 to-slate-200">
+                    <img
+                      src={screenshot.image}
+                      alt={t(screenshot.title)}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
+                        {screenshot.category}
+                      </span>
+                    </div>
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">
+                      {t(screenshot.title)}
+                    </h4>
+                    <p className="text-sm text-slate-600">
+                      {t(screenshot.description)}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* View All Projects CTA - Responsive */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="text-center px-4 sm:px-0"
+          className="text-center px-4 sm:px-0 mt-16 sm:mt-20"
         >
           <motion.a
             href="https://github.com/Manitriniaina2002"
