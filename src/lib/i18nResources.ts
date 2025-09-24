@@ -177,6 +177,8 @@ export const resources = {
   "projects.liveDemo": "Live Demo",
   "projects.viewCode": "View Code",
   "projects.viewAllProjects": "View all projects",
+  "projects.completed": "Completed",
+  "projects.inProgress": "In Progress",
 
   "projects.0.title": "Platform Automation Suite",
   "projects.0.description": "An end-to-end automation platform for CI/CD, infrastructure provisioning and monitoring.",
@@ -406,6 +408,8 @@ export const resources = {
   "projects.liveDemo": "Démo en direct",
   "projects.viewCode": "Voir le code",
   "projects.viewAllProjects": "Voir tous les projets",
+  "projects.completed": "Terminé",
+  "projects.inProgress": "En cours",
 
   "projects.0.title": "Suite d'automatisation de plateforme",
   "projects.0.description": "Une plateforme d'automatisation de bout en bout pour CI/CD, le provisionnement d'infrastructure et la surveillance.",
@@ -635,6 +639,8 @@ export const resources = {
   "projects.liveDemo": "Live-Demo",
   "projects.viewCode": "Code ansehen",
   "projects.viewAllProjects": "Alle Projekte anzeigen",
+  "projects.completed": "Abgeschlossen",
+  "projects.inProgress": "In Bearbeitung",
 
   "projects.0.title": "Plattform-Automatisierungs-Suite",
   "projects.0.description": "Eine End-to-End-Automatisierungsplattform für CI/CD, Infrastruktur-Provisioning und Monitoring.",
@@ -865,6 +871,8 @@ export const resources = {
   "projects.liveDemo": "ライブデモ",
   "projects.viewCode": "コードを見る",
   "projects.viewAllProjects": "すべてのプロジェクトを見る",
+  "projects.completed": "完了",
+  "projects.inProgress": "進行中",
 
   "projects.0.title": "プラットフォーム自動化スイート",
   "projects.0.description": "CI/CD、インフラプロビジョニング、監視のためのエンドツーエンド自動化プラットフォーム。",
